@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Page</title>
+    <title>Caracterización sensorial de licor de cacao</title>
+    
+    <!-- Importing Lato Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif; /* Apply Lato font */
+            margin: 0;
+            padding: 0;
+            background-image: url('https://github.com/Joulessss/WP_TCL/blob/main/IMAGE_WEBPAGE.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.6); /* Add transparency to background */
+            margin: 0 auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+        #sensorial-attributes {
+            margin-top: 100px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 20px;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, welcome to my simple web page!</h1>
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Caracterización sensorial de licor de cacao con panel no entrenado</h1>
+        <p>En este estudio, se evaluaron las características sensoriales del licor de cacao utilizando un panel no entrenado. A continuación, puede seleccionar un atributo para explorar más detalles.</p>
+
+        <!-- Dropdown List -->
+        <label for="atributos">Seleccione un atributo sensorial:</label>
+        <br><br>
+        <select id="atributos">
+            <option value="sabor">Sabor</option>
+            <option value="aroma">Aroma</option>
+            <option value="textura">Textura</option>
+            <option value="intensidad">Intensidad</option>
+        </select>
+        <br><br>
+
+        <!-- Button to redirect to another section -->
+        <button onclick="scrollToAttributes()">Ver atributos sensoriales</button>
+    </div>
+
+    <!-- Sensorial Attributes Section -->
+    <div id="sensorial-attributes" class="container">
+        <h2>Atributos Sensoriales</h2>
+        <ul>
+            <li><strong>Sabor:</strong> Dulce, amargo, ácido, salado.</li>
+            <li><strong>Aroma:</strong> Floral, afrutado, terroso, tostado.</li>
+            <li><strong>Textura:</strong> Cremosa, granulosa, suave.</li>
+            <li><strong>Intensidad:</strong> Suave, moderada, fuerte.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Function to scroll to the sensorial attributes section
+        function scrollToAttributes() {
+            document.getElementById('sensorial-attributes').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
